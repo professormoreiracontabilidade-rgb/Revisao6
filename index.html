@@ -1,0 +1,55 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Quiz 3 - Professor Moreira</title><style>
+:root{--azul:#0b5ed7;--azul2:#eaf4ff;--verde:#198754;--vermelho:#dc3545;--cinza:#f5f7fa;--texto:#172033}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#dff1ff,#f8fbff);color:var(--texto)}
+.app{max-width:760px;margin:auto;min-height:100vh;padding:12px 12px 92px}
+.brand{background:#083b7a;color:white;border-radius:18px;padding:14px 16px;text-align:center;box-shadow:0 5px 18px #0002;margin-bottom:12px}
+.brand h1{font-size:21px;margin:0 0 5px}.brand .sub{font-size:15px;font-weight:700;color:#ffe66d}
+.card{background:white;border-radius:20px;padding:18px;box-shadow:0 5px 20px #0002;min-height:68vh}
+.meta{font-weight:800;color:var(--azul);font-size:15px;margin-bottom:10px}.title{font-size:22px;font-weight:900;margin-bottom:14px}
+.question{font-size:19px;line-height:1.45;font-weight:650;white-space:normal}
+.options{display:grid;gap:10px;margin-top:16px}
+.option{border:2px solid #cbd7e6;background:#fff;border-radius:14px;padding:13px;font-size:18px;line-height:1.35;text-align:left;cursor:pointer}
+.option.selected{border-color:var(--azul);background:var(--azul2)}
+.confirm{width:100%;margin-top:16px;border:0;border-radius:14px;padding:14px;font-size:18px;font-weight:900;background:var(--azul);color:white}
+.feedback{display:none;margin-top:14px;padding:13px;border-radius:12px;font-size:17px;font-weight:800}
+.feedback.ok{display:block;background:#d9f6e5;color:#075b2c}.feedback.bad{display:block;background:#ffe0e3;color:#8a1420}
+.resolution{font-size:19px;line-height:1.55}.resolution b{color:#073b78}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#ffffffee;backdrop-filter:blur(8px);border-top:1px solid #d7e1ec;padding:10px;display:flex;gap:8px;justify-content:center}
+.nav button{border:0;border-radius:12px;padding:12px 14px;font-size:16px;font-weight:900;background:#0b5ed7;color:white;min-width:78px}.nav .restart{background:#5b6470}
+.counter{text-align:center;font-weight:800;margin:10px;color:#456}
+.note{background:#fff3cd;border:1px solid #ffe69c;padding:10px;border-radius:10px;margin-top:12px;font-size:15px}
+@media(max-width:520px){.app{padding:8px 8px 88px}.card{padding:15px;min-height:72vh}.question,.resolution{font-size:17px}.option{font-size:16.5px;padding:12px}.brand h1{font-size:19px}.title{font-size:20px}}
+</style></head>
+<body><div class="app"><div class="brand"><h1>CURSO DE CONTABILIDADE PROFESSOR MOREIRA</h1><div class="sub">FGV • EXAME DE SUFICIÊNCIA DO CFC</div></div><div id="counter" class="counter"></div><main id="card" class="card"></main></div>
+<div class="nav"><button id="prev" onclick="prev()">← Voltar</button><button class="restart" onclick="restart()">↻ Reiniciar</button><button id="next" onclick="next()">Avançar →</button></div>
+<script>const DATA=[{"n": 53, "q": "Um hospital localizado no Centro da cidade adquiriu um terreno ao lado de seu prédio para a construção de um estacionamento para ser utilizado, exclusivamente, pelos pacientes, de modo a oferecer melhor atendimento. No Balanço Patrimonial do hospital, o terreno deve ser classificado como", "opts": ["(A) Ativo Imobilizado.", "(B) Ativo Realizável a Longo Prazo.", "(C) Propriedade para investimento.", "(D) Ativo não circulante mantido para a venda."], "ans": 0, "res": "<b>Gabarito: A.</b><br><br>O terreno será utilizado na própria atividade da entidade, dando suporte ao atendimento dos pacientes. Portanto, é um bem destinado à manutenção das atividades: <b>Ativo Imobilizado</b>.<br><br>Não é propriedade para investimento, pois não foi adquirido para aluguel ou valorização de capital."}, {"n": 54, "q": "Com relação às Demonstrações Financeiras, de acordo com a Lei nº 6.404/76 e modificações, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa.<br><br>( ) As demonstrações de cada exercício serão publicadas com a indicação dos valores correspondentes das demonstrações do exercício anterior.<br>( ) Nas demonstrações, não poderá haver agrupamento de contas semelhantes.<br>( ) As demonstrações financeiras registrarão a destinação dos lucros segundo a proposta dos órgãos da administração, e o valor será considerado definitivo.<br>( ) As demonstrações serão complementadas por notas explicativas e outros quadros analíticos ou demonstrações contábeis necessárias para esclarecimento da situação patrimonial e dos resultados do exercício.<br><br>As afirmativas são, respectivamente,", "opts": ["(A) V – V – F – F.", "(B) V – F – F – V.", "(C) F – V – F – V.", "(D) V – F – V – F."], "ans": 1, "res": "<b>Gabarito: B — V, F, F, V.</b><br><br><b>I – Verdadeira:</b> há indicação dos valores correspondentes do exercício anterior.<br><b>II – Falsa:</b> a lei admite agrupamento de contas semelhantes, observados os critérios legais.<br><b>III – Falsa:</b> a proposta de destinação não se torna definitiva apenas por constar das demonstrações.<br><b>IV – Verdadeira:</b> notas explicativas e quadros complementares esclarecem a situação patrimonial e os resultados."}, {"n": 55, "q": "O ativo fiscal diferido é o valor do tributo sobre o lucro recuperável em período futuro relacionado ao que se afirma a seguir, com exceção de", "opts": ["(A) diferenças temporárias dedutíveis.", "(B) diferenças temporárias tributáveis.", "(C) compensação futura de prejuízos fiscais não utilizados.", "(D) compensação futura de créditos fiscais não utilizados."], "ans": 1, "res": "<b>Gabarito: B.</b><br><br>Ativo fiscal diferido está ligado a valores recuperáveis no futuro, como <b>diferenças temporárias dedutíveis</b>, prejuízos fiscais e créditos fiscais não utilizados. Já as <b>diferenças temporárias tributáveis</b> estão, em regra, relacionadas ao <b>passivo fiscal diferido</b>."}, {"n": 56, "q": "A Cia. Verde Amarela é uma empresa brasileira que vende objetos relacionados à Seleção Masculina de Futebol. Em 31/12/2022, a empresa apresentou lucro líquido de R$ 800.000 em sua Demonstração do Resultado do Exercício. No entanto, estimou que o lucro apresentaria uma redução de 80% em 2023. Com a finalidade de segregar uma parcela do lucro em 2022, a Cia. Verde Amarela poderia constituir, em 31/12/2022,", "opts": ["(A) reserva para contingências.", "(B) reserva de lucros a realizar.", "(C) reserva de lucros para expansão.", "(D) ajuste de avaliação patrimonial."], "ans": 0, "res": "<b>Gabarito: A.</b><br><br>A <b>reserva para contingências</b> pode ser constituída para compensar, em exercício futuro, a diminuição do lucro decorrente de perda julgada provável e cujo valor possa ser estimado.<br><br>A questão destaca justamente a previsão de forte redução futura do lucro."}];
+let screen=0, selected={};
+const total=DATA.length*2;
+function render(){
+ const qi=Math.floor(screen/2), isRes=screen%2===1, d=DATA[qi];
+ document.getElementById('counter').textContent=`Tela ${screen+1}/${total} • Questão ${d.n}`;
+ let c=document.getElementById('card');
+ if(!isRes){
+   let opts=d.opts.map((o,i)=>`<button class="option ${selected[qi]===i?'selected':''}" onclick="choose(${qi},${i})">${o}</button>`).join('');
+   c.innerHTML=`<div class="meta">FGV • Exame de Suficiência do CFC</div><div class="title">Questão ${d.n}</div><div class="question">${d.q}</div><div class="options">${opts}</div><button class="confirm" onclick="confirmAnswer(${qi})">Confirmar Resposta</button><div id="fb" class="feedback"></div>`;
+ }else{
+   c.innerHTML=`<div class="meta">FGV • Exame de Suficiência do CFC</div><div class="title">Resolução • Questão ${d.n}</div><div class="resolution">${d.res}</div>`;
+ }
+ document.getElementById('prev').disabled=screen===0;
+ document.getElementById('next').disabled=screen===total-1;
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function choose(qi,i){selected[qi]=i;render()}
+function confirmAnswer(qi){
+ const d=DATA[qi], fb=document.getElementById('fb');
+ if(selected[qi]===undefined){fb.className='feedback bad';fb.textContent='Selecione uma alternativa antes de confirmar.';return}
+ if(d.ans===null){fb.className='feedback ok';fb.textContent='Questão com elemento visual ausente no PDF. Consulte a tela de resolução.';return}
+ if(selected[qi]===d.ans){fb.className='feedback ok';fb.textContent='🟢 Resposta correta!'} else {fb.className='feedback bad';fb.textContent='🔴 Resposta incorreta. Veja a resolução na próxima tela.'}
+}
+function next(){if(screen<total-1){screen++;render()}}
+function prev(){if(screen>0){screen--;render()}}
+function restart(){screen=0;selected={};render()}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev()});
+let sx=0;document.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});document.addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx;if(dx<-70)next();if(dx>70)prev()},{passive:true});
+render();
+</script></body></html>
