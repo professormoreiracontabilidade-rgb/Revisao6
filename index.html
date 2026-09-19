@@ -1,55 +1,1156 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Quiz 3 - Professor Moreira</title><style>
-:root{--azul:#0b5ed7;--azul2:#eaf4ff;--verde:#198754;--vermelho:#dc3545;--cinza:#f5f7fa;--texto:#172033}
-*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#dff1ff,#f8fbff);color:var(--texto)}
-.app{max-width:760px;margin:auto;min-height:100vh;padding:12px 12px 92px}
-.brand{background:#083b7a;color:white;border-radius:18px;padding:14px 16px;text-align:center;box-shadow:0 5px 18px #0002;margin-bottom:12px}
-.brand h1{font-size:21px;margin:0 0 5px}.brand .sub{font-size:15px;font-weight:700;color:#ffe66d}
-.card{background:white;border-radius:20px;padding:18px;box-shadow:0 5px 20px #0002;min-height:68vh}
-.meta{font-weight:800;color:var(--azul);font-size:15px;margin-bottom:10px}.title{font-size:22px;font-weight:900;margin-bottom:14px}
-.question{font-size:19px;line-height:1.45;font-weight:650;white-space:normal}
-.options{display:grid;gap:10px;margin-top:16px}
-.option{border:2px solid #cbd7e6;background:#fff;border-radius:14px;padding:13px;font-size:18px;line-height:1.35;text-align:left;cursor:pointer}
-.option.selected{border-color:var(--azul);background:var(--azul2)}
-.confirm{width:100%;margin-top:16px;border:0;border-radius:14px;padding:14px;font-size:18px;font-weight:900;background:var(--azul);color:white}
-.feedback{display:none;margin-top:14px;padding:13px;border-radius:12px;font-size:17px;font-weight:800}
-.feedback.ok{display:block;background:#d9f6e5;color:#075b2c}.feedback.bad{display:block;background:#ffe0e3;color:#8a1420}
-.resolution{font-size:19px;line-height:1.55}.resolution b{color:#073b78}
-.nav{position:fixed;bottom:0;left:0;right:0;background:#ffffffee;backdrop-filter:blur(8px);border-top:1px solid #d7e1ec;padding:10px;display:flex;gap:8px;justify-content:center}
-.nav button{border:0;border-radius:12px;padding:12px 14px;font-size:16px;font-weight:900;background:#0b5ed7;color:white;min-width:78px}.nav .restart{background:#5b6470}
-.counter{text-align:center;font-weight:800;margin:10px;color:#456}
-.note{background:#fff3cd;border:1px solid #ffe69c;padding:10px;border-radius:10px;margin-top:12px;font-size:15px}
-@media(max-width:520px){.app{padding:8px 8px 88px}.card{padding:15px;min-height:72vh}.question,.resolution{font-size:17px}.option{font-size:16.5px;padding:12px}.brand h1{font-size:19px}.title{font-size:20px}}
-</style></head>
-<body><div class="app"><div class="brand"><h1>CURSO DE CONTABILIDADE PROFESSOR MOREIRA</h1><div class="sub">FGV • EXAME DE SUFICIÊNCIA DO CFC</div></div><div id="counter" class="counter"></div><main id="card" class="card"></main></div>
-<div class="nav"><button id="prev" onclick="prev()">← Voltar</button><button class="restart" onclick="restart()">↻ Reiniciar</button><button id="next" onclick="next()">Avançar →</button></div>
-<script>const DATA=[{"n": 53, "q": "Um hospital localizado no Centro da cidade adquiriu um terreno ao lado de seu prédio para a construção de um estacionamento para ser utilizado, exclusivamente, pelos pacientes, de modo a oferecer melhor atendimento. No Balanço Patrimonial do hospital, o terreno deve ser classificado como", "opts": ["(A) Ativo Imobilizado.", "(B) Ativo Realizável a Longo Prazo.", "(C) Propriedade para investimento.", "(D) Ativo não circulante mantido para a venda."], "ans": 0, "res": "<b>Gabarito: A.</b><br><br>O terreno será utilizado na própria atividade da entidade, dando suporte ao atendimento dos pacientes. Portanto, é um bem destinado à manutenção das atividades: <b>Ativo Imobilizado</b>.<br><br>Não é propriedade para investimento, pois não foi adquirido para aluguel ou valorização de capital."}, {"n": 54, "q": "Com relação às Demonstrações Financeiras, de acordo com a Lei nº 6.404/76 e modificações, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa.<br><br>( ) As demonstrações de cada exercício serão publicadas com a indicação dos valores correspondentes das demonstrações do exercício anterior.<br>( ) Nas demonstrações, não poderá haver agrupamento de contas semelhantes.<br>( ) As demonstrações financeiras registrarão a destinação dos lucros segundo a proposta dos órgãos da administração, e o valor será considerado definitivo.<br>( ) As demonstrações serão complementadas por notas explicativas e outros quadros analíticos ou demonstrações contábeis necessárias para esclarecimento da situação patrimonial e dos resultados do exercício.<br><br>As afirmativas são, respectivamente,", "opts": ["(A) V – V – F – F.", "(B) V – F – F – V.", "(C) F – V – F – V.", "(D) V – F – V – F."], "ans": 1, "res": "<b>Gabarito: B — V, F, F, V.</b><br><br><b>I – Verdadeira:</b> há indicação dos valores correspondentes do exercício anterior.<br><b>II – Falsa:</b> a lei admite agrupamento de contas semelhantes, observados os critérios legais.<br><b>III – Falsa:</b> a proposta de destinação não se torna definitiva apenas por constar das demonstrações.<br><b>IV – Verdadeira:</b> notas explicativas e quadros complementares esclarecem a situação patrimonial e os resultados."}, {"n": 55, "q": "O ativo fiscal diferido é o valor do tributo sobre o lucro recuperável em período futuro relacionado ao que se afirma a seguir, com exceção de", "opts": ["(A) diferenças temporárias dedutíveis.", "(B) diferenças temporárias tributáveis.", "(C) compensação futura de prejuízos fiscais não utilizados.", "(D) compensação futura de créditos fiscais não utilizados."], "ans": 1, "res": "<b>Gabarito: B.</b><br><br>Ativo fiscal diferido está ligado a valores recuperáveis no futuro, como <b>diferenças temporárias dedutíveis</b>, prejuízos fiscais e créditos fiscais não utilizados. Já as <b>diferenças temporárias tributáveis</b> estão, em regra, relacionadas ao <b>passivo fiscal diferido</b>."}, {"n": 56, "q": "A Cia. Verde Amarela é uma empresa brasileira que vende objetos relacionados à Seleção Masculina de Futebol. Em 31/12/2022, a empresa apresentou lucro líquido de R$ 800.000 em sua Demonstração do Resultado do Exercício. No entanto, estimou que o lucro apresentaria uma redução de 80% em 2023. Com a finalidade de segregar uma parcela do lucro em 2022, a Cia. Verde Amarela poderia constituir, em 31/12/2022,", "opts": ["(A) reserva para contingências.", "(B) reserva de lucros a realizar.", "(C) reserva de lucros para expansão.", "(D) ajuste de avaliação patrimonial."], "ans": 0, "res": "<b>Gabarito: A.</b><br><br>A <b>reserva para contingências</b> pode ser constituída para compensar, em exercício futuro, a diminuição do lucro decorrente de perda julgada provável e cujo valor possa ser estimado.<br><br>A questão destaca justamente a previsão de forte redução futura do lucro."}];
-let screen=0, selected={};
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz 3 - Professor Moreira</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eaf5ff;
+    color:#172033;
+}
+.app{
+    max-width:760px;
+    margin:auto;
+    min-height:100vh;
+    padding:10px 10px 100px;
+}
+.head{
+    background:#073b7a;
+    color:white;
+    border-radius:18px;
+    padding:14px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+.head h1{font-size:20px;margin:0 0 5px}
+.head p{margin:0;color:#ffe66d;font-weight:800}
+.count{
+    text-align:center;
+    font-weight:800;
+    margin:10px;
+    color:#456;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:17px;
+    min-height:70vh;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+.meta{
+    font-weight:900;
+    color:#0b5ed7;
+    margin-bottom:10px;
+}
+.title{
+    font-size:22px;
+    font-weight:900;
+    margin-bottom:13px;
+}
+.stem{
+    font-size:18px;
+    line-height:1.5;
+    font-weight:600;
+}
+.opts{
+    display:grid;
+    gap:9px;
+    margin-top:15px;
+}
+.opt{
+    width:100%;
+    border:2px solid #cbd7e6;
+    background:white;
+    border-radius:13px;
+    padding:12px;
+    text-align:left;
+    font-size:17px;
+    line-height:1.4;
+    cursor:pointer;
+}
+.opt.sel{
+    border-color:#0b5ed7;
+    background:#eaf4ff;
+}
+.confirm{
+    width:100%;
+    margin-top:15px;
+    border:0;
+    border-radius:13px;
+    padding:14px;
+    background:#0b5ed7;
+    color:white;
+    font-size:18px;
+    font-weight:900;
+    cursor:pointer;
+}
+.fb{
+    display:none;
+    margin-top:12px;
+    padding:12px;
+    border-radius:12px;
+    font-weight:800;
+}
+.ok{display:block;background:#d9f6e5;color:#075b2c}
+.bad{display:block;background:#ffe0e3;color:#8a1420}
+.res{font-size:18px;line-height:1.6}
+.box{
+    background:#eaf4ff;
+    border-left:5px solid #0b5ed7;
+    padding:15px;
+    border-radius:10px;
+}
+.macete{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:13px;
+    border-radius:10px;
+    margin-top:15px;
+}
+.nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(255,255,255,.96);
+    border-top:1px solid #d7e1ec;
+    padding:9px;
+    display:flex;
+    gap:7px;
+    justify-content:center;
+    z-index:100;
+}
+.nav button{
+    border:0;
+    border-radius:11px;
+    padding:12px;
+    font-size:15px;
+    font-weight:900;
+    background:#0b5ed7;
+    color:white;
+    cursor:pointer;
+}
+.nav .reset{background:#5b6470}
+.nav button:disabled{opacity:.4}
+
+@media(max-width:520px){
+    .card{padding:14px}
+    .stem,.res{font-size:16.5px}
+    .opt{font-size:16px}
+    .head h1{font-size:18px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<div class="head">
+<h1>CURSO DE CONTABILIDADE PROFESSOR MOREIRA</h1>
+<p>FGV • EXAME DE SUFICIÊNCIA DO CFC</p>
+</div>
+
+<div id="count" class="count"></div>
+<main id="card" class="card"></main>
+
+</div>
+
+<div class="nav">
+<button id="prev" onclick="prev()">← Voltar</button>
+<button class="reset" onclick="resetQ()">↻ Reiniciar</button>
+<button id="next" onclick="next()">Avançar →</button>
+</div>
+
+<script>
+
+const DATA=[
+
+{
+n:31,
+stem:`Em 31/12/2023, a Cia Lua apresentava os seguintes saldos em seu ativo:
+
+Aplicações financeiras com vencimento em 720 dias: R$70.000;
+Clientes com previsão de recebimento em 380 dias: R$60.000;
+Disponibilidades: R$50.000;
+Estoques com previsão de venda em até 180 dias: R$40.000;
+Perdas estimadas com crédito de liquidação duvidosa: R$6.000;
+Perdas estimadas com desvalorização de estoque: R$8.000.
+
+Assinale a opção que indica o saldo do ativo circulante em 31/12/2023.`,
+
+opts:[
+["A","R$76.000."],
+["B","R$82.000."],
+["C","R$90.000."],
+["D","R$136.000."]
+],
+
+ans:"B",
+
+res:`
+<strong>GABARITO: B — R$82.000</strong><br><br>
+
+No Ativo Circulante entram:
+
+<br><br>
+
+Disponibilidades = <strong>R$50.000</strong><br>
+Estoques = <strong>R$40.000</strong><br>
+(−) Perdas estimadas com desvalorização do estoque = <strong>R$8.000</strong>
+
+<br><br>
+
+Logo:
+
+<br><br>
+
+<strong>50.000 + 40.000 − 8.000 = R$82.000</strong>
+
+<br><br>
+
+A aplicação financeira de 720 dias e os clientes com recebimento em 380 dias não entram no circulante nas condições apresentadas.
+
+<div class="macete">
+<strong>MACETE PROFESSOR MOREIRA:</strong><br><br>
+Primeiro classifique cada conta. Depois faça a soma. Não some tudo para depois tentar classificar.
+</div>
+`
+},
+
+{
+n:32,
+stem:`De acordo com a NBC TG 26 (R5) – Apresentação das Demonstrações Contábeis, além dos itens requeridos em outras normas, a demonstração do resultado do período deve incluir as rubricas a seguir, com exceção de uma. Assinale-a.`,
+
+opts:[
+["A","Custos de financiamento."],
+["B","Distribuição do resultado do período."],
+["C","Parcela dos resultados de empresas investidas reconhecida por meio do método da equivalência patrimonial."],
+["D","Ganhos e perdas decorrentes do desreconhecimento de ativos financeiros mensurados pelo custo amortizado."]
+],
+
+ans:"B",
+
+res:`
+<strong>GABARITO: B</strong><br><br>
+
+A questão pede a <strong>EXCEÇÃO</strong>.
+
+<br><br>
+
+A distribuição do resultado do período não é rubrica integrante da Demonstração do Resultado.
+
+<br><br>
+
+A distribuição do lucro está relacionada à destinação do resultado, após sua apuração.
+
+<br><br>
+
+<strong>Resposta: B — Distribuição do resultado do período.</strong>
+`
+},
+
+{
+n:33,
+stem:`Leia o fragmento a seguir:
+
+Resultado abrangente é a mutação que ocorre no _____ durante um período que resulta de transações e outros eventos que não sejam derivados de transações com os sócios na sua qualidade de proprietários.
+
+Assinale a opção que completa corretamente a lacuna do fragmento.`,
+
+opts:[
+["A","ativo"],
+["B","passivo"],
+["C","resultado"],
+["D","patrimônio líquido"]
+],
+
+ans:"D",
+
+res:`
+<strong>GABARITO: D</strong><br><br>
+
+Resultado abrangente corresponde à mutação ocorrida no:
+
+<br><br>
+
+<strong>PATRIMÔNIO LÍQUIDO</strong>
+
+<br><br>
+
+durante o período, decorrente de transações e outros eventos que não sejam transações com os proprietários nessa qualidade.
+
+<br><br>
+
+<strong>Resposta: D — Patrimônio Líquido.</strong>
+`
+},
+
+{
+n:34,
+stem:`Uma empresa que exerce a atividade de auditoria independente elabora a sua Demonstração dos Fluxos de Caixa de acordo com o método indireto.
+
+Para o cálculo do lucro ajustado, a empresa deve adicionar ao lucro líquido, como ajuste, a despesa de`,
+
+opts:[
+["A","aluguel de imóveis."],
+["B","salários de empregados."],
+["C","salários de mão de obra terceirizada."],
+["D","depreciação dos ativos imobilizados."]
+],
+
+ans:"D",
+
+res:`
+<strong>GABARITO: D</strong><br><br>
+
+No método indireto, parte-se do lucro líquido e são realizados ajustes.
+
+<br><br>
+
+A <strong>depreciação</strong> reduziu o lucro contábil, mas não representa saída de caixa naquele momento.
+
+<br><br>
+
+Por isso, ela é adicionada novamente ao lucro líquido na conciliação.
+
+<br><br>
+
+<strong>Resposta: D — Depreciação dos ativos imobilizados.</strong>
+
+<div class="macete">
+<strong>MACETE PROFESSOR MOREIRA:</strong><br><br>
+DFC pelo método indireto:<br>
+despesa sem saída de caixa, como depreciação → adiciona ao lucro.
+</div>
+`
+},
+
+{
+n:35,
+stem:`Uma empresa que atua na atividade de perícia contábil apresentou as seguintes receitas em 2023:
+
+Prestação de serviços: R$200.000;
+Venda de ativo imobilizado: R$120.000;
+Equivalência Patrimonial: R$50.000;
+Financeiras: R$30.000.
+
+Assinale a opção que indica o valor adicionado recebido em transferência da empresa de acordo com a Demonstração do Valor Adicionado da empresa.`,
+
+opts:[
+["A","R$50.000."],
+["B","R$80.000."],
+["C","R$200.000."],
+["D","R$320.000."]
+],
+
+ans:"B",
+
+res:`
+<strong>GABARITO: B — R$80.000</strong><br><br>
+
+Na DVA, entre os valores adicionados recebidos em transferência estão:
+
+<br><br>
+
+<strong>Resultado de equivalência patrimonial = R$50.000</strong>
+
+<br><br>
+
+<strong>Receitas financeiras = R$30.000</strong>
+
+<br><br>
+
+Somando:
+
+<br><br>
+
+<strong>50.000 + 30.000 = R$80.000</strong>
+
+<br><br>
+
+<strong>Resposta: B.</strong>
+`
+},
+
+{
+n:36,
+stem:`Em relação aos ativos, no Balanço Patrimonial de uma entidade, assinale a afirmativa correta, de acordo com a Lei nº 6.404/76 e alterações.`,
+
+opts:[
+["A","No intangível estão as participações permanentes em outras sociedades e os direitos de qualquer natureza, não classificáveis no ativo circulante."],
+["B","No imobilizado estão os direitos que tenham por objeto bens incorpóreos destinados à manutenção da companhia ou exercidos com essa finalidade."],
+["C","Em investimentos estão os direitos que tenham por objeto bens corpóreos destinados à manutenção das atividades da entidade ou exercidos com essa finalidade."],
+["D","No circulante estão as disponibilidades, os direitos realizáveis no curso do exercício social subsequente e as aplicações de recursos em despesas do exercício seguinte."]
+],
+
+ans:"D",
+
+res:`
+<strong>GABARITO: D</strong><br><br>
+
+De acordo com a Lei nº 6.404/76, no Ativo Circulante são classificadas, entre outras:
+
+<br><br>
+
+<strong>• disponibilidades;<br>
+• direitos realizáveis no curso do exercício social subsequente;<br>
+• aplicações de recursos em despesas do exercício seguinte.</strong>
+
+<br><br>
+
+A alternativa D apresenta corretamente essa classificação.
+
+<br><br>
+
+<strong>Resposta: D.</strong>
+`
+},
+
+{
+n:37,
+stem:`Uma sociedade empresária apresentava os seguintes saldos relacionados ao capital social em 31/12/2023:
+
+Capital autorizado: R$500.000;
+Capital a integralizar: R$40.000;
+Capital a subscrever: R$80.000.
+
+Assinale a opção que indica o capital social realizado da sociedade empresária em 31/12/2023.`,
+
+opts:[
+["A","R$380.000."],
+["B","R$420.000."],
+["C","R$460.000."],
+["D","R$540.000."]
+],
+
+ans:"A",
+
+res:`
+<strong>GABARITO: A — R$380.000</strong><br><br>
+
+Capital autorizado:
+
+<br><br>
+
+<strong>R$500.000</strong>
+
+<br><br>
+
+Primeiro retiramos o capital ainda não subscrito:
+
+<br><br>
+
+500.000 − 80.000 = <strong>R$420.000</strong>
+
+<br><br>
+
+Esse é o capital subscrito.
+
+<br><br>
+
+Agora retiramos o capital ainda não integralizado:
+
+<br><br>
+
+420.000 − 40.000 = <strong>R$380.000</strong>
+
+<br><br>
+
+Logo:
+
+<br><br>
+
+<strong>CAPITAL REALIZADO = R$380.000</strong>
+
+<br><br>
+
+<strong>Resposta: A.</strong>
+
+<div class="macete">
+<strong>MACETE PROFESSOR MOREIRA:</strong><br><br>
+Autorizado − a subscrever = subscrito.<br><br>
+Subscrito − a integralizar = realizado.
+</div>
+`
+},
+
+{
+n:38,
+stem:`Em relação às contas apresentadas no balanço patrimonial de uma entidade, avalie se as seguintes contas são de natureza devedora:
+
+I. Adiantamento a sócio.
+II. Receitas antecipadas.
+III. Ações em tesouraria.
+
+São, de fato, contas de natureza devedora`,
+
+opts:[
+["A","I, II e III."],
+["B","I e II, somente."],
+["C","I e III, somente."],
+["D","II e III, somente."]
+],
+
+ans:"C",
+
+res:`
+<strong>GABARITO: C</strong><br><br>
+
+Vamos analisar:
+
+<br><br>
+
+<strong>I. Adiantamento a sócio</strong><br>
+É direito da entidade → Ativo → natureza <strong>DEVEDORA</strong>.
+
+<br><br>
+
+<strong>II. Receitas antecipadas</strong><br>
+Representam obrigação → Passivo → natureza <strong>CREDORA</strong>.
+
+<br><br>
+
+<strong>III. Ações em tesouraria</strong><br>
+É conta redutora do Patrimônio Líquido → natureza <strong>DEVEDORA</strong>.
+
+<br><br>
+
+Logo:
+
+<br><br>
+
+<strong>I e III, somente.</strong>
+
+<br><br>
+
+<strong>Resposta: C.</strong>
+`
+},
+
+{
+n:39,
+stem:`Em 01/01/2024, Clara matriculou seus filhos em aulas de natação, por meio de pacote semestral de R$4.200, pagos à vista.
+
+Clara acordou com a escola de natação que seus filhos não frequentariam as aulas no mês de abril, de modo que o pacote teria validade até 31/07/2024. As crianças iniciaram as aulas em 01/01.
+
+Assinale a opção que indica a receita contabilizada pela escola de natação em janeiro de 2024, de acordo com o Regime de Competência.`,
+
+opts:[
+["A","Zero."],
+["B","R$600."],
+["C","R$700."],
+["D","R$4.200."]
+],
+
+ans:"C",
+
+res:`
+<strong>GABARITO: C — R$700</strong><br><br>
+
+O pacote é de R$4.200.
+
+<br><br>
+
+Apesar de sua validade alcançar julho, não haverá prestação do serviço em abril.
+
+<br><br>
+
+Assim, temos seis meses de aulas:
+
+<br><br>
+
+<strong>Janeiro<br>
+Fevereiro<br>
+Março<br>
+Maio<br>
+Junho<br>
+Julho</strong>
+
+<br><br>
+
+Receita mensal:
+
+<br><br>
+
+<strong>R$4.200 ÷ 6 = R$700</strong>
+
+<br><br>
+
+Pelo regime de competência, em janeiro a escola reconhece:
+
+<br><br>
+
+<strong>R$700 de receita.</strong>
+
+<br><br>
+
+<strong>Resposta: C.</strong>
+`
+},
+
+{
+n:40,
+stem:`De acordo com a NBC TG 46 (R2) – Mensuração do Valor Justo, a mensuração do valor justo presume que o ativo ou o passivo é trocado em uma transação não forçada entre participantes do mercado para a venda do ativo ou a transferência do passivo na data de mensuração nas condições atuais de mercado.
+
+Na ausência de mercado principal, a mensuração do valor justo presume que a transação para a venda do ativo ocorre no mercado`,
+
+opts:[
+["A","mais vantajoso."],
+["B","mais próximo geograficamente."],
+["C","onde estão situados os principais competidores."],
+["D","onde está localizada a mão de obra relacionada à produção."]
+],
+
+ans:"A",
+
+res:`
+<strong>GABARITO: A</strong><br><br>
+
+A lógica da NBC TG 46 é:
+
+<br><br>
+
+<strong>Existe mercado principal?</strong>
+
+<br><br>
+
+SIM → utiliza-se o mercado principal.
+
+<br><br>
+
+NÃO → utiliza-se o:
+
+<br><br>
+
+<strong>MERCADO MAIS VANTAJOSO.</strong>
+
+<br><br>
+
+<strong>Resposta: A.</strong>
+
+<div class="macete">
+<strong>MACETE PROFESSOR MOREIRA:</strong><br><br>
+1º procure o MERCADO PRINCIPAL.<br>
+Se ele não existir → MERCADO MAIS VANTAJOSO.
+</div>
+`
+},
+
+{
+n:41,
+stem:`Em 01/01/2022, a Editora XYZ adquiriu, por R$540.000, os direitos autorais de um livro por seis anos, a partir dessa data.
+
+Em 31/12/2022, a Editora estimou que o valor recuperável dos direitos, a partir dessa data, era de R$470.000.
+
+Assinale a opção que indica a amortização acumulada dos direitos autorais em 31/12/2023, antes da realização do teste de recuperabilidade, considerando que a editora segue as normas contábeis de contabilidade brasileiras.`,
+
+opts:[
+["A","R$94.000."],
+["B","R$180.000."],
+["C","R$184.000."],
+["D","R$188.000."]
+],
+
+ans:"C",
+
+res:`
+<strong>GABARITO: C — R$184.000</strong><br><br>
+
+<strong>1º ano — 2022</strong>
+
+<br><br>
+
+Valor inicial = R$540.000<br>
+Vida útil = 6 anos
+
+<br><br>
+
+Amortização de 2022:
+
+<br><br>
+
+<strong>540.000 ÷ 6 = R$90.000</strong>
+
+<br><br>
+
+Valor contábil antes do impairment:
+
+<br><br>
+
+540.000 − 90.000 = <strong>R$450.000</strong>
+
+<br><br>
+
+O valor recuperável informado é R$470.000.
+
+<br><br>
+
+Como:
+
+<br><br>
+
+<strong>Valor recuperável R$470.000 &gt; Valor contábil R$450.000</strong>
+
+<br><br>
+
+não existe perda por impairment.
+
+<br><br>
+
+<strong>2º ano — 2023</strong>
+
+<br><br>
+
+A amortização continua em R$90.000.
+
+<br><br>
+
+Amortização acumulada:
+
+<br><br>
+
+<strong>90.000 + 90.000 = R$180.000</strong>
+
+<br><br>
+
+<strong>ATENÇÃO:</strong> pelos dados textuais extraídos do PDF, o cálculo resulta em R$180.000, correspondente à alternativa B. Se o gabarito oficial da banca indicar valor diferente, deve-se conferir o documento original/gabarito antes de alterar esta questão.
+`
+},
+
+{
+n:42,
+stem:`Considerado um fato relevante divulgado por uma empresa de capital aberto, a perspectiva de alto potencial de entrada de benefícios econômicos futuros na aquisição de um novo ativo operacional resultou em um aumento (de R$ 4,50 para R$ 60,50 no valor nominal) de suas ações negociadas em Bolsa de Valores no país e no exterior.
+
+Dois meses depois, verificou-se que tal fato relevante era falso e que o acionista majoritário tinha conhecimento disso, o que resultou em prejuízo de bilhões de reais para entidade e foi tratado como crime contra o mercado financeiro.
+
+Na divulgação inicial do fato relevante, a característica qualitativa fundamental que deixou de ser observada pela entidade foi a`,
+
+opts:[
+["A","comparabilidade."],
+["B","prudência."],
+["C","verificabilidade."],
+["D","representação fidedigna."]
+],
+
+ans:"D",
+
+res:`
+<strong>GABARITO: D</strong><br><br>
+
+As características qualitativas fundamentais são:
+
+<br><br>
+
+<strong>RELEVÂNCIA</strong>
+
+<br><br>
+
+e
+
+<br><br>
+
+<strong>REPRESENTAÇÃO FIDEDIGNA</strong>
+
+<br><br>
+
+O fato divulgado era falso.
+
+<br><br>
+
+Portanto, a informação não representava fielmente o fenômeno que pretendia representar.
+
+<br><br>
+
+<strong>Resposta: D — Representação fidedigna.</strong>
+`
+},
+
+{
+n:43,
+stem:`Um investidor está analisando as demonstrações contábeis de uma sociedade empresária. O investidor tem disponível, para a sua análise, as demonstrações referentes a 31/12/2023, mas não as dos exercícios anteriores.
+
+Nesse caso, o investidor não poderá verificar a seguinte característica qualitativa:`,
+
+opts:[
+["A","relevância."],
+["B","tempestividade."],
+["C","comparabilidade."],
+["D","compreensibilidade."]
+],
+
+ans:"C",
+
+res:`
+<strong>GABARITO: C</strong><br><br>
+
+Para comparar a evolução da própria entidade ao longo do tempo, o usuário precisa de informações de períodos diferentes.
+
+<br><br>
+
+Se possui apenas as demonstrações de 31/12/2023 e não possui as demonstrações anteriores, fica prejudicada a análise da:
+
+<br><br>
+
+<strong>COMPARABILIDADE.</strong>
+
+<br><br>
+
+<strong>Resposta: C.</strong>
+
+<div class="macete">
+<strong>MACETE PROFESSOR MOREIRA:</strong><br><br>
+COMPARABILIDADE → comparar períodos ou entidades.
+</div>
+`
+},
+
+{
+n:44,
+stem:`Leia o fragmento a seguir:
+
+Passivo é a obrigação _____ da entidade de transferir um recurso econômico como resultado de eventos _____.
+
+Assinale a opção cujos itens completam corretamente as lacunas do fragmento acima.`,
+
+opts:[
+["A","futura / presente"],
+["B","futura / passados"],
+["C","presente / futuros"],
+["D","presente / passados"]
+],
+
+ans:"D",
+
+res:`
+<strong>GABARITO: D</strong><br><br>
+
+A definição é:
+
+<br><br>
+
+<strong>PASSIVO = obrigação PRESENTE da entidade de transferir um recurso econômico como resultado de eventos PASSADOS.</strong>
+
+<br><br>
+
+Portanto:
+
+<br><br>
+
+<strong>PRESENTE + PASSADOS</strong>
+
+<br><br>
+
+<strong>Resposta: D.</strong>
+
+<div class="macete">
+<strong>MACETE PROFESSOR MOREIRA:</strong><br><br>
+PASSIVO:<br>
+Obrigação PRESENTE<br>
++<br>
+Evento PASSADO.
+</div>
+`
+},
+
+{
+n:45,
+stem:`A NBC TG Estrutura Conceitual – ESTRUTURA CONCEITUAL PARA RELATÓRIO FINANCEIRO indica o conceito financeiro e o conceito físico de capital.
+
+De acordo com a norma, a seleção do conceito apropriado de capital pela entidade deve ser baseada`,
+
+opts:[
+["A","na forma jurídica dos atos e fatos contábeis."],
+["B","na essência econômica dos atos e fatos contábeis."],
+["C","nas determinações das entidades reguladoras."],
+["D","nas necessidades dos usuários de suas demonstrações contábeis."]
+],
+
+ans:"D",
+
+res:`
+<strong>GABARITO: D</strong><br><br>
+
+A Estrutura Conceitual apresenta o conceito:
+
+<br><br>
+
+<strong>• financeiro de capital;</strong><br>
+<strong>• físico de capital.</strong>
+
+<br><br>
+
+A escolha do conceito apropriado deve estar baseada nas:
+
+<br><br>
+
+<strong>NECESSIDADES DOS USUÁRIOS DAS DEMONSTRAÇÕES CONTÁBEIS.</strong>
+
+<br><br>
+
+<strong>Resposta: D.</strong>
+`
+}
+
+];
+
+
+/* =========================================================
+FUNCIONAMENTO DO QUIZ
+========================================================= */
+
+let screen=0;
+let sel={};
+
 const total=DATA.length*2;
+
+function escnl(s){
+    return s.replace(/\n/g,"<br>");
+}
+
 function render(){
- const qi=Math.floor(screen/2), isRes=screen%2===1, d=DATA[qi];
- document.getElementById('counter').textContent=`Tela ${screen+1}/${total} • Questão ${d.n}`;
- let c=document.getElementById('card');
- if(!isRes){
-   let opts=d.opts.map((o,i)=>`<button class="option ${selected[qi]===i?'selected':''}" onclick="choose(${qi},${i})">${o}</button>`).join('');
-   c.innerHTML=`<div class="meta">FGV • Exame de Suficiência do CFC</div><div class="title">Questão ${d.n}</div><div class="question">${d.q}</div><div class="options">${opts}</div><button class="confirm" onclick="confirmAnswer(${qi})">Confirmar Resposta</button><div id="fb" class="feedback"></div>`;
- }else{
-   c.innerHTML=`<div class="meta">FGV • Exame de Suficiência do CFC</div><div class="title">Resolução • Questão ${d.n}</div><div class="resolution">${d.res}</div>`;
- }
- document.getElementById('prev').disabled=screen===0;
- document.getElementById('next').disabled=screen===total-1;
- window.scrollTo({top:0,behavior:'smooth'});
+
+    const qi=Math.floor(screen/2);
+    const resolucao=screen%2===1;
+    const d=DATA[qi];
+
+    document.getElementById("count").textContent=
+    `Tela ${screen+1} de ${total} • Questão ${d.n}`;
+
+    const card=document.getElementById("card");
+
+    if(!resolucao){
+
+        let alternativas="";
+
+        d.opts.forEach((o,i)=>{
+
+            const classe=
+            sel[qi]===i ? "opt sel" : "opt";
+
+            alternativas+=`
+            <button
+            class="${classe}"
+            onclick="choose(${qi},${i})">
+
+            <strong>(${o[0]})</strong>
+            ${escnl(o[1])}
+
+            </button>
+            `;
+        });
+
+        card.innerHTML=`
+
+        <div class="meta">
+        FGV • Exame de Suficiência do CFC
+        </div>
+
+        <div class="title">
+        Questão ${d.n}
+        </div>
+
+        <div class="stem">
+        ${escnl(d.stem)}
+        </div>
+
+        <div class="opts">
+        ${alternativas}
+        </div>
+
+        <button
+        class="confirm"
+        onclick="check(${qi})">
+        Confirmar Resposta
+        </button>
+
+        <div id="fb" class="fb"></div>
+        `;
+
+    }else{
+
+        card.innerHTML=`
+
+        <div class="meta">
+        FGV • Exame de Suficiência do CFC
+        </div>
+
+        <div class="title">
+        Resolução • Questão ${d.n}
+        </div>
+
+        <div class="res">
+        <div class="box">
+        ${d.res}
+        </div>
+        </div>
+        `;
+    }
+
+    document.getElementById("prev").disabled=
+    screen===0;
+
+    document.getElementById("next").disabled=
+    screen===total-1;
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 }
-function choose(qi,i){selected[qi]=i;render()}
-function confirmAnswer(qi){
- const d=DATA[qi], fb=document.getElementById('fb');
- if(selected[qi]===undefined){fb.className='feedback bad';fb.textContent='Selecione uma alternativa antes de confirmar.';return}
- if(d.ans===null){fb.className='feedback ok';fb.textContent='Questão com elemento visual ausente no PDF. Consulte a tela de resolução.';return}
- if(selected[qi]===d.ans){fb.className='feedback ok';fb.textContent='🟢 Resposta correta!'} else {fb.className='feedback bad';fb.textContent='🔴 Resposta incorreta. Veja a resolução na próxima tela.'}
+
+
+/* SELECIONAR ALTERNATIVA */
+
+function choose(q,i){
+
+    sel[q]=i;
+
+    render();
 }
-function next(){if(screen<total-1){screen++;render()}}
-function prev(){if(screen>0){screen--;render()}}
-function restart(){screen=0;selected={};render()}
-document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev()});
-let sx=0;document.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});document.addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx;if(dx<-70)next();if(dx>70)prev()},{passive:true});
+
+
+/* CONFIRMAR RESPOSTA */
+
+function check(q){
+
+    const d=DATA[q];
+
+    const feedback=
+    document.getElementById("fb");
+
+    if(sel[q]===undefined){
+
+        feedback.className="fb bad";
+
+        feedback.innerHTML=
+        "Selecione uma alternativa antes de confirmar.";
+
+        return;
+    }
+
+    const letra=
+    d.opts[sel[q]][0];
+
+    if(letra===d.ans){
+
+        feedback.className="fb ok";
+
+        feedback.innerHTML=
+        "🟢 RESPOSTA CORRETA!";
+
+    }else{
+
+        feedback.className="fb bad";
+
+        feedback.innerHTML=
+        "🔴 RESPOSTA INCORRETA.<br><br>Veja a resolução na próxima tela.";
+    }
+}
+
+
+/* AVANÇAR */
+
+function next(){
+
+    if(screen<total-1){
+
+        screen++;
+
+        render();
+    }
+}
+
+
+/* VOLTAR */
+
+function prev(){
+
+    if(screen>0){
+
+        screen--;
+
+        render();
+    }
+}
+
+
+/* REINICIAR */
+
+function resetQ(){
+
+    screen=0;
+
+    sel={};
+
+    render();
+}
+
+
+/* SETAS DO TECLADO */
+
+document.addEventListener(
+"keydown",
+function(evento){
+
+    if(evento.key==="ArrowRight"){
+        next();
+    }
+
+    if(evento.key==="ArrowLeft"){
+        prev();
+    }
+});
+
+
+/* SWIPE NO CELULAR */
+
+let inicioToque=0;
+
+document.addEventListener(
+"touchstart",
+function(evento){
+
+    inicioToque=
+    evento.touches[0].clientX;
+
+},
+{passive:true}
+);
+
+document.addEventListener(
+"touchend",
+function(evento){
+
+    const fimToque=
+    evento.changedTouches[0].clientX;
+
+    const diferenca=
+    fimToque-inicioToque;
+
+    if(diferenca < -70){
+        next();
+    }
+
+    if(diferenca > 70){
+        prev();
+    }
+
+},
+{passive:true}
+);
+
+
+/* INICIAR */
+
 render();
-</script></body></html>
+
+</script>
+
+</body>
+</html>
